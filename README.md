@@ -1,3 +1,10 @@
+##### V6.6.2 Correcciones móvil, sesión y contraseña
+- Menú móvil superpuesto y cierre automático al elegir un módulo.
+- Formularios y vistas móviles usan todo el ancho disponible sin deformarse.
+- Restauración real de la sesión de Supabase al actualizar con F5.
+- Pantalla de carga mientras se valida la sesión.
+- Recuperación de contraseña desde el login y formulario para establecer la nueva clave.
+
 #### V6.6.1 Roles corregidos
 - Corregido SERVICIO_TECNICO para coincidir con el enum de Supabase.
 - Corregido TRANSPORTE.
