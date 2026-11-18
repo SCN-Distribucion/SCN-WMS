@@ -1,3 +1,10 @@
+##### V6.6.4 Reclamos compartidos en Supabase
+- Reclamos guardados en public.technical_claims, visibles según RLS.
+- Servicio Técnico envía a PENDIENTE_SUPERVISOR.
+- Supervisor autoriza o rechaza y ADMIN recibe los autorizados.
+- ADMIN gestiona NC_PENDIENTE y NC_EMITIDA.
+- Cantidad perdida editable manualmente sin restablecerse a 1 durante la escritura.
+
 ##### V6.6.3 Usuarios conectados a Supabase
 - Alta real mediante la Edge Function admin-create-user.
 - Creación vinculada en Supabase Auth y public.profiles con el mismo UID.
