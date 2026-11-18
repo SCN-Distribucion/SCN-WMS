@@ -41,6 +41,44 @@ $('#forgotPassword').onclick=async()=>{const email=$('#loginForm').user.value.tr
 restoreSupabaseSession();
 })();
 
-/* V6.2.1: modulo Usuarios restaurado */
-(()=>{const $=s=>document.querySelector(s),E=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),key='scn-wms-v621-users',priority={ADMIN:1,SUPERVISOR:2,LOGISTICA:3,DEPOSITO:4,'SERVICIO TECNICO':4,'REPARTIDOR / TRANSPORTISTA':5};let a;try{a=JSON.parse(localStorage.getItem(key))||window.WMS_USERS||[]}catch{a=window.WMS_USERS||[]}window.WMS_USERS=a;const f=$('#userForm'),l=$('#userList');if(!f||!l)return;const save=()=>localStorage.setItem(key,JSON.stringify(a)),draw=()=>{l.innerHTML=a.map(u=>`<div><div><b>${E(u.name)}</b> <span class="role-badge">${E(u.role)} · Prioridad ${priority[u.role]||''}</span><p>${E(u.login)} · <span class="${u.status==='ACTIVO'?'status-active':'status-inactive'}">${E(u.status)}</span> · Cambio de clave: ${E(u.change||'SI')}</p>${u.transportId?`<small>ID Transportista: ${E(u.transportId)} · Patente: ${E(u.plate||'-')}</small>`:''}</div><div class="user-actions"><button type="button" data-toggle="${E(u.id)}" class="${u.status==='ACTIVO'?'danger':''}">${u.status==='ACTIVO'?'Desactivar':'Activar'}</button></div></div>`).join('')};f.onsubmit=e=>{e.preventDefault();const x=e.currentTarget,login=x.login.value.trim();if(a.some(u=>u.login.toLowerCase()===login.toLowerCase()))return alert('El usuario ya existe.');a.push({id:`USR-${String(a.length+1).padStart(4,'0')}`,name:x.name.value.trim(),login,password:x.password.value,role:x.role.value,priority:priority[x.role.value],status:'ACTIVO',change:'SI',transportId:x.transportId.value.trim(),plate:x.plate.value.trim()});save();users=a;window.WMS_USERS=a;x.reset();x.password.value='OREO.3023';draw();toast('Usuario creado correctamente. Ya puede iniciar sesión.','success')};l.onclick=e=>{const b=e.target.closest('[data-toggle]');if(!b)return;const u=a.find(x=>x.id===b.dataset.toggle);u.status=u.status==='ACTIVO'?'INACTIVO':'ACTIVO';save();draw()};document.querySelector('[data-v="usuarios"]')?.addEventListener('click',draw);draw()})();
+/* V6.6.3: administración real de usuarios con Supabase */
+(()=>{
+ const $=s=>document.querySelector(s),E=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const priority={ADMIN:1,SUPERVISOR:2,LOGISTICA:3,DEPOSITO:4,SERVICIO_TECNICO:4,TRANSPORTE:5};
+ const roleMap={'SERVICIO TECNICO':'SERVICIO_TECNICO','REPARTIDOR / TRANSPORTISTA':'TRANSPORTE'};
+ const f=$('#userForm'),l=$('#userList'); if(!f||!l)return;
+ const normalizeRole=r=>roleMap[r]||String(r||'').trim().toUpperCase().replaceAll(' ','_');
+ const displayRole=r=>String(r||'').replaceAll('_',' ');
+ async function loadUsers(){
+  l.innerHTML='<div>Cargando usuarios desde Supabase…</div>';
+  try{
+   const {data,error}=await window.scnSupabase.from('profiles').select('id,full_name,email,role,priority,active').order('priority').order('full_name');
+   if(error)throw error;
+   l.innerHTML=(data||[]).map(u=>`<div><div><b>${E(u.full_name)}</b> <span class="role-badge">${E(displayRole(u.role))} · Prioridad ${E(u.priority??priority[u.role]??'')}</span><p>${E(u.email)} · <span class="${u.active?'status-active':'status-inactive'}">${u.active?'ACTIVO':'INACTIVO'}</span></p></div><div class="user-actions"><button type="button" data-toggle="${E(u.id)}" data-active="${u.active?'1':'0'}" class="${u.active?'danger':''}">${u.active?'Desactivar':'Activar'}</button></div></div>`).join('')||'<div>No hay perfiles registrados.</div>';
+  }catch(err){l.innerHTML=`<div class="import-bad">No se pudieron cargar los usuarios: ${E(err.message)}</div>`}
+ }
+ f.onsubmit=async e=>{
+  e.preventDefault(); const x=e.currentTarget,btn=x.querySelector('button[type="submit"]');
+  btn.disabled=true;btn.textContent='Creando en Supabase…';
+  try{
+   if(!window.scnSupabase)throw new Error('No hay conexión con Supabase.');
+   const payload={full_name:x.name.value.trim(),email:x.login.value.trim().toLowerCase(),password:x.password.value,role:normalizeRole(x.role.value),transport_id:x.transportId.value.trim()||null,plate:x.plate.value.trim()||null};
+   const {data,error}=await window.scnSupabase.functions.invoke('admin-create-user',{body:payload});
+   if(error){let detail='';try{detail=(await error.context?.json())?.error||''}catch{}throw new Error(detail||error.message||'No se pudo crear el usuario.');}
+   if(!data?.ok)throw new Error(data?.error||'Supabase no confirmó el alta.');
+   x.reset();x.password.value='OREO.3023';await loadUsers();toast('Usuario creado correctamente en Supabase Auth y profiles.','success');
+  }catch(err){toast(err.message,'error')}
+  finally{btn.disabled=false;btn.textContent='Agregar usuario'}
+ };
+ l.onclick=async e=>{
+  const b=e.target.closest('[data-toggle]');if(!b)return;
+  b.disabled=true;
+  try{
+   const active=b.dataset.active!=='1';
+   const {error}=await window.scnSupabase.from('profiles').update({active}).eq('id',b.dataset.toggle);
+   if(error)throw error;await loadUsers();toast(active?'Usuario activado.':'Usuario desactivado.','success');
+  }catch(err){toast('No se pudo actualizar el estado: '+err.message,'error');b.disabled=false}
+ };
+ document.querySelector('[data-v="usuarios"]')?.addEventListener('click',loadUsers);loadUsers();
+})();
 

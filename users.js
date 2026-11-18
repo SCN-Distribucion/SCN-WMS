@@ -1,1 +1,1 @@
-window.WMS_USERS=[{"id":"USR-0001","name":"Matías Romero","login":"matias.romero","password":"OREO.3023","role":"ADMIN","status":"ACTIVO","change":"SI"}];
+window.WMS_USERS=[];

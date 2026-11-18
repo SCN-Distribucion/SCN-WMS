@@ -1,3 +1,10 @@
+##### V6.6.3 Usuarios conectados a Supabase
+- Alta real mediante la Edge Function admin-create-user.
+- Creación vinculada en Supabase Auth y public.profiles con el mismo UID.
+- Listado de usuarios obtenido desde profiles, sin localStorage.
+- Activación y desactivación contra profiles.
+- Eliminada la contraseña heredada guardada como texto en users.js.
+
 ##### V6.6.2 Correcciones móvil, sesión y contraseña
 - Menú móvil superpuesto y cierre automático al elegir un módulo.
 - Formularios y vistas móviles usan todo el ancho disponible sin deformarse.
