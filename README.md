@@ -1,3 +1,9 @@
+##### V6.6.5 Diagnóstico y confirmación de envío de reclamos
+- Estado visible dentro de la ventana: Guardando, Enviando, éxito o error exacto de Supabase.
+- Validación visible y foco automático en campos inválidos.
+- El UID del creador se obtiene de la sesión real de Supabase.
+- Tiempo máximo de espera de 15 segundos para evitar botones aparentemente congelados.
+
 ##### V6.6.4 Reclamos compartidos en Supabase
 - Reclamos guardados en public.technical_claims, visibles según RLS.
 - Servicio Técnico envía a PENDIENTE_SUPERVISOR.

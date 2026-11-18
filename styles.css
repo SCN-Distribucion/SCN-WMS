@@ -28,3 +28,6 @@
  body:not(.sidebar-collapsed)::after{content:"";position:fixed;inset:69px 0 0 0;background:rgba(7,31,48,.28);z-index:25;pointer-events:none}
  #sidebar{z-index:30}
 }
+
+/* V6.6.5 - respuesta visible del envío de reclamos */
+.claim-form-message{margin:16px 0 4px;padding:12px 14px;border-radius:12px;font-weight:800;line-height:1.35}.claim-form-message.working{background:#e4f3fb;color:#075985;border:1px solid #7dd3fc}.claim-form-message.success{background:#dcfce7;color:#166534;border:1px solid #86efac}.claim-form-message.error{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5}#claimForm .dialog-actions button:disabled{opacity:.65;cursor:wait}
