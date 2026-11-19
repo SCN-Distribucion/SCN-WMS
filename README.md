@@ -1,3 +1,12 @@
+####### V6.7.0 Usuarios, fleteros, viajes compartidos y cola de correo
+- ADMIN edita perfiles, vehículo y patente.
+- LOGISTICA asigna desde lista de transportistas activos.
+- TRANSPORTE ve únicamente sus viajes y no ve el formulario de asignación.
+- Flujo Aceptar → Iniciar → Confirmar entrega/retiro.
+- Viajes compartidos en Supabase por assigned_driver_id.
+- Cola notification_queue preparada para Power Automate + Outlook.
+- Versión de prueba.
+
 ####### V6.6.9 Depósito, transporte e historial auditable
 - Foto real obligatoria en alta y movimientos de Depósito.
 - Confirmación de entrega/retiro con PDV, local, receptor, DNI, cargo, firma, fotos y ubicación opcional.
