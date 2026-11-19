@@ -1,3 +1,9 @@
+####### V6.7.1 Visibilidad de fleteros para LOGÍSTICA
+- Política RLS adicional para que ADMIN vea perfiles y LOGÍSTICA/SUPERVISOR consulten transportistas activos.
+- Selector informa claramente cuando no existen fleteros visibles.
+- Estado vacío específico para TRANSPORTE sin viajes asignados.
+- Versión de prueba.
+
 ####### V6.7.0 Usuarios, fleteros, viajes compartidos y cola de correo
 - ADMIN edita perfiles, vehículo y patente.
 - LOGISTICA asigna desde lista de transportistas activos.
