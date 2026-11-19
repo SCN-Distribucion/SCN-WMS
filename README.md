@@ -1,3 +1,10 @@
+####### V6.6.7 Detalle de reclamos para Supervisor y ADMIN
+- UUID técnico oculto en las tarjetas; se muestra únicamente la chapa.
+- Botón Ver detalle / Ocultar detalle.
+- Detalle auditable con PDV, fecha, motivo, evidencias, productos, cantidades, precios y subtotales.
+- Autorizar, Rechazar y acciones de ADMIN dentro del detalle desplegado.
+- Diseño responsive para escritorio y móvil.
+
 ###### V6.6.6 UUID de reclamos compatible con Supabase
 - El identificador técnico usa crypto.randomUUID().
 - Corrige invalid input syntax for type uuid causado por IDs NC-...
