@@ -27,7 +27,7 @@ async function persistClaim(status){
   const {data:{session},error:sessionError}=await window.scnSupabase.auth.getSession();
   if(sessionError||!session?.user)throw new Error('La sesión no está disponible. Cerrá sesión e ingresá nuevamente.');
   const fd=new FormData(f),u=user();
-  const payload={id:'NC-'+Date.now(),chapa:String(fd.get('chapa')).trim(),pdv:String(fd.get('pdv')||'').trim(),incident_date:fd.get('incidentDate'),reason:String(fd.get('reason')).trim(),evidence:[...(f.elements.evidence?.files||[])].map(x=>x.name),items:items.map(x=>({...x,qty:Number(x.qty)})),total:items.reduce((sum,p)=>sum+Number(p.qty)*Number(p.unitPriceVat),0),status,created_by:session.user.id,created_by_name:u.name||session.user.email||'Usuario'};
+  const payload={id:crypto.randomUUID(),chapa:String(fd.get('chapa')).trim(),pdv:String(fd.get('pdv')||'').trim(),incident_date:fd.get('incidentDate'),reason:String(fd.get('reason')).trim(),evidence:[...(f.elements.evidence?.files||[])].map(x=>x.name),items:items.map(x=>({...x,qty:Number(x.qty)})),total:items.reduce((sum,p)=>sum+Number(p.qty)*Number(p.unitPriceVat),0),status,created_by:session.user.id,created_by_name:u.name||session.user.email||'Usuario'};
   const request=window.scnSupabase.from('technical_claims').insert(payload).select('id,status').single();
   const timeout=new Promise((_,reject)=>setTimeout(()=>reject(new Error('Supabase no respondió en 15 segundos. Revisá la conexión y las políticas RLS.')),15000));
   const {data,error}=await Promise.race([request,timeout]);

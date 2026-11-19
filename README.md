@@ -1,3 +1,9 @@
+###### V6.6.6 UUID de reclamos compatible con Supabase
+- El identificador técnico usa crypto.randomUUID().
+- Corrige invalid input syntax for type uuid causado por IDs NC-...
+- Conserva las relaciones con claim_items y las políticas RLS existentes.
+- Mantiene el flujo Servicio Técnico → Supervisor → ADMIN y el diagnóstico visible.
+
 ##### V6.6.5 Diagnóstico y confirmación de envío de reclamos
 - Estado visible dentro de la ventana: Guardando, Enviando, éxito o error exacto de Supabase.
 - Validación visible y foco automático en campos inválidos.
