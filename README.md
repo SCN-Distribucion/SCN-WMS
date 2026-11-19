@@ -1,3 +1,10 @@
+####### V6.6.9 Depósito, transporte e historial auditable
+- Foto real obligatoria en alta y movimientos de Depósito.
+- Confirmación de entrega/retiro con PDV, local, receptor, DNI, cargo, firma, fotos y ubicación opcional.
+- Firma y fotos privadas en freezer-evidence mediante URL temporal.
+- Historial detallado con estado anterior/nuevo y evidencias para roles habilitados.
+- Versión de prueba, no producción.
+
 ####### V6.6.8 Evidencias reales en Supabase Storage
 - Fotos subidas al bucket privado technical-claim-evidence.
 - Supervisor y ADMIN pueden abrirlas mediante URL firmada temporal.

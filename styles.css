@@ -37,3 +37,6 @@
 
 /* V6.6.8 evidencia real */
 .evidence-open{padding:8px 10px;text-align:left;max-width:100%;overflow-wrap:anywhere}.claim-evidence small{color:#6b7280}
+
+/* V6.6.9 Depósito, transporte, firma e historial */
+.delivery-dialog{width:min(900px,96vw)}.signature-box{margin-top:14px;padding:12px;background:#f5fbfe;border:1px solid #d8eaf2;border-radius:12px}.signature-box canvas{display:block;width:100%;height:180px;margin-top:8px;background:#fff;border:2px dashed #9fc7da;border-radius:10px;touch-action:none}.signature-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px}.history-extra{margin:12px 0;padding:12px;background:#f5fbfe;border-radius:10px}.history-card{max-width:1100px!important}@media(max-width:700px){.delivery-dialog .grid{grid-template-columns:1fr}.signature-box canvas{height:150px}.signature-actions>*{width:100%}}
