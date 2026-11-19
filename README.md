@@ -1,3 +1,9 @@
+####### V6.7.2 Viaje CAMBIO
+- Nuevo tipo CAMBIO para entregar un freezer y retirar otro en la misma visita.
+- Dos chapas obligatorias y diferentes.
+- Una única asignación, fletero, vehículo, patente, PDV, firma y visita.
+- Historial distingue entrega y retiro dentro del mismo viaje.
+
 ####### V6.7.1 Visibilidad de fleteros para LOGÍSTICA
 - Política RLS adicional para que ADMIN vea perfiles y LOGÍSTICA/SUPERVISOR consulten transportistas activos.
 - Selector informa claramente cuando no existen fleteros visibles.
