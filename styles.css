@@ -34,3 +34,6 @@
 
 /* V6.6.7 - detalle auditable de reclamos */
 .claim-detail-toggle{margin-top:12px}.claim-detail{margin-top:14px;padding-top:14px;border-top:1px solid #cfe1e9}.claim-detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.claim-detail-grid>div{display:grid;gap:4px;background:#f5fbfe;border:1px solid #d8eaf2;border-radius:10px;padding:10px}.claim-detail-grid span{overflow-wrap:anywhere}.claim-detail-wide{grid-column:1/-1}.claim-products-table{max-height:none;margin-top:8px}.claim-products-table tfoot td{background:#eef8fd}.claim-evidence{margin-top:14px;padding:12px;background:#f5fbfe;border-radius:10px}.claim-evidence ul{margin:7px 0 0;padding-left:20px}.claim-detail-actions{margin-top:14px;padding-top:14px;border-top:1px solid #cfe1e9}@media(max-width:700px){.claim-detail-grid{grid-template-columns:1fr}.claim-detail-wide{grid-column:auto}.claim-detail-toggle{width:100%}.claim-detail-actions button{flex:1 1 100%}}
+
+/* V6.6.8 evidencia real */
+.evidence-open{padding:8px 10px;text-align:left;max-width:100%;overflow-wrap:anywhere}.claim-evidence small{color:#6b7280}

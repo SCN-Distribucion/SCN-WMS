@@ -1,3 +1,8 @@
+####### V6.6.8 Evidencias reales en Supabase Storage
+- Fotos subidas al bucket privado technical-claim-evidence.
+- Supervisor y ADMIN pueden abrirlas mediante URL firmada temporal.
+- Los reclamos anteriores que solo guardaron el nombre no pueden recuperar la imagen.
+
 ####### V6.6.7 Detalle de reclamos para Supervisor y ADMIN
 - UUID técnico oculto en las tarjetas; se muestra únicamente la chapa.
 - Botón Ver detalle / Ocultar detalle.
