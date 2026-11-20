@@ -1,8 +1,8 @@
-####### V6.7.3 Corrección de dependencias y paquete completo
-- Eliminada la referencia rota a `vendor/jspdf.umd.min.js` que generaba error 404.
-- Se conserva el generador PDF local de respaldo incluido en `app.js`, sin dependencia externa.
-- Agregado `favicon.ico` generado desde el ícono SCN para evitar recursos faltantes.
-- Paquete completo con los archivos operativos V6.7.0, V6.7.1 y V6.7.2.
+####### V6.7.4 Finalización persistente de entregas y retiros
+- La confirmación del repartidor actualiza directamente `transport_trips` en Supabase.
+- El viaje cambia a `COMPLETADO` antes de recargar la pantalla.
+- Se guardan `completed_at`, `confirmation` y `updated_at` con PDV, local, receptor, fotos, firma y ubicación.
+- Si Supabase rechaza la actualización, la pantalla muestra el error y no informa una finalización falsa.
 
 ####### V6.7.2 Viaje CAMBIO
 - Nuevo tipo CAMBIO para entregar un freezer y retirar otro en la misma visita.
