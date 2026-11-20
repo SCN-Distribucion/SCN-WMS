@@ -1,14 +1,10 @@
-####### V6.7.4 Finalización persistente de entregas y retiros
-- La confirmación del repartidor actualiza directamente `transport_trips` en Supabase.
-- El viaje cambia a `COMPLETADO` antes de recargar la pantalla.
-- Se guardan `completed_at`, `confirmation` y `updated_at` con PDV, local, receptor, fotos, firma y ubicación.
-- Si Supabase rechaza la actualización, la pantalla muestra el error y no informa una finalización falsa.
-
-####### V6.7.2 Viaje CAMBIO
-- Nuevo tipo CAMBIO para entregar un freezer y retirar otro en la misma visita.
-- Dos chapas obligatorias y diferentes.
-- Una única asignación, fletero, vehículo, patente, PDV, firma y visita.
-- Historial distingue entrega y retiro dentro del mismo viaje.
+####### V6.7.5 Finalización atómica de viajes
+- Base estable V6.7.1, sin incorporar todavía la operación CAMBIO.
+- ENTREGA y RETIRO se completan mediante la función SQL `complete_own_transport_trip`.
+- Supabase verifica que el viaje esté EN CURSO y asignado al usuario autenticado.
+- La interfaz no modifica el estado local ni recarga hasta recibir `COMPLETADO` desde Supabase.
+- Eliminado el temporizador de sincronización que podía perder la actualización.
+- Eliminada la referencia faltante a `vendor/jspdf.umd.min.js`; se conserva el PDF nativo de respaldo.
 
 ####### V6.7.1 Visibilidad de fleteros para LOGÍSTICA
 - Política RLS adicional para que ADMIN vea perfiles y LOGÍSTICA/SUPERVISOR consulten transportistas activos.
