@@ -1,3 +1,9 @@
+####### V6.7.3 Corrección de dependencias y paquete completo
+- Eliminada la referencia rota a `vendor/jspdf.umd.min.js` que generaba error 404.
+- Se conserva el generador PDF local de respaldo incluido en `app.js`, sin dependencia externa.
+- Agregado `favicon.ico` generado desde el ícono SCN para evitar recursos faltantes.
+- Paquete completo con los archivos operativos V6.7.0, V6.7.1 y V6.7.2.
+
 ####### V6.7.2 Viaje CAMBIO
 - Nuevo tipo CAMBIO para entregar un freezer y retirar otro en la misma visita.
 - Dos chapas obligatorias y diferentes.
