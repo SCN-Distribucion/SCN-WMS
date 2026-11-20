@@ -1,3 +1,14 @@
+####### V6.7.6 Asignación inteligente por PDV y operación CAMBIO
+- ADMIN y LOGISTICA asignan ENTREGA, RETIRO y CAMBIO.
+- El PDV completa razón social y dirección desde la base maestra local.
+- El campo Vendedor queda visible y preparado; cuando la base no lo contiene muestra NO INFORMADO EN BASE MAESTRA.
+- ENTREGA solo permite equipos RECIBIDO, RECIBIDO - NUEVO o DISPONIBLE en Ancaste 3023.
+- RETIRO valida que la chapa esté asociada al PDV.
+- CAMBIO vincula una chapa a retirar y otra a entregar en un mismo viaje.
+- Inconsistencias generan incidencias persistentes para DEPOSITO o ADMINISTRACION.
+- La asignación y finalización usan funciones atómicas en Supabase y bloquean chapas con viajes activos.
+- Se conservó la finalización estable de V6.7.5 y se agregaron parámetros de versión a los archivos web.
+
 ####### V6.7.5 Finalización atómica de viajes
 - Base estable V6.7.1, sin incorporar todavía la operación CAMBIO.
 - ENTREGA y RETIRO se completan mediante la función SQL `complete_own_transport_trip`.
