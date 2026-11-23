@@ -1,3 +1,14 @@
+####### V6.7.7 Ubicaciones fisicas de Deposito
+- Maestro de ubicaciones con codigo, nombre, tipo y capacidad.
+- Zonas iniciales REC-INGRESO, REC-CONTROL y PRE-DESPACHO.
+- Asignacion y traslado de freezers por chapa y codigo de ubicacion.
+- Consulta por chapa o ubicacion, ocupacion y responsable.
+- Codigo de barras Code 39 imprimible sin dependencia externa.
+- Historial de ubicacion integrado a la trazabilidad local.
+- Todos los roles pueden consultar. SUPERVISOR y TRANSPORTE no pueden modificar.
+- Solo ADMIN crea ubicaciones.
+- Persistencia y control de capacidad mediante Supabase RPC.
+
 ####### V6.7.6 Asignación inteligente por PDV y operación CAMBIO
 - ADMIN y LOGISTICA asignan ENTREGA, RETIRO y CAMBIO.
 - El PDV completa razón social y dirección desde la base maestra local.
