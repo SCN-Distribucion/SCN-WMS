@@ -1,3 +1,14 @@
+####### V6.7.8 Mobile / Android / QR
+- QR estable por freezer con formato SCN-WMS:FREEZER:[chapa].
+- Lector universal: Honeywell EDA51 por entrada de scanner/teclado y cámara cuando Android ofrece BarcodeDetector.
+- Ficha móvil de freezer desde QR o chapa.
+- Usuario conectado y rol visibles también en pantallas móviles.
+- Popup global de éxito ¡BUEN TRABAJO! para operaciones confirmadas como exitosas.
+- Overlay de carga/spinner con logo y colores SCN disponible para operaciones asíncronas.
+- SQL freezer_qr_registry preparado para persistencia única en Supabase.
+- La V6.7.7 de ubicaciones se conserva sin alterar su RPC ni control de capacidad.
+- Base preparada para empaquetado Android con Capacitor; el APK firmado requiere compilación Android externa.
+
 ####### V6.7.7 Ubicaciones fisicas de Deposito
 - Maestro de ubicaciones con codigo, nombre, tipo y capacidad.
 - Zonas iniciales REC-INGRESO, REC-CONTROL y PRE-DESPACHO.
