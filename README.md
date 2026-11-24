@@ -1,3 +1,18 @@
+### SCN-WMS V7.6
+- Rediseño exclusivo de etiquetas QR para mejorar lectura y estética.
+- Etiqueta física 70 x 50 mm.
+- Logo SCN más grande, FREEZER SCN, CHAPA, número destacado y QR de 34 mm.
+- Se elimina cualquier dato variable de la etiqueta.
+- Impresión A4 en 2 columnas para preservar tamaño real y legibilidad.
+- No cambia el valor interno del QR ni requiere SQL nuevo.
+
+### SCN-WMS V7.5
+- Depósito ahora tiene 3 submenús laterales independientes: Entrada / salida, Alta freezer nuevo y Ubicaciones.
+- Entrada / salida ya no muestra el botón + Alta freezer nuevo.
+- Alta freezer nuevo abre exclusivamente el formulario de alta existente.
+- Ubicaciones conserva sin cambios la lógica validada V6.7.7.
+- No requiere SQL nuevo.
+
 ## SCN-WMS V7.4
 - Corrige el pantallazo y la pantalla en blanco al elegir un submenú.
 - Elimina de la carga web el controlador anterior v701.js, que competía con v703.js.
