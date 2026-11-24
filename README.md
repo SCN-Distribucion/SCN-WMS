@@ -1,3 +1,12 @@
+# SCN-WMS V7
+- Corrige la impresión QR en navegador eliminando el motor Node incompatible de V6.7.9.
+- Panel ADMIN de etiquetas QR visible dentro de Base.
+- Impresión individual y masiva con vista previa en la aplicación.
+- Impresión mediante iframe interno, evitando la pestaña about:blank vacía.
+- QR único por freezer: SCN-WMS:FREEZER:[chapa].
+- Conserva V6.7.8/V6.7.7, roles, ubicaciones, viajes, trazabilidad y estructura Android.
+- No requiere SQL nuevo si SUPABASE-V678-QR-FREEZERS.sql ya fue ejecutado.
+
 ####### V6.7.9 Etiquetas QR individuales y masivas
 - Generación de QR estándar y escaneable por freezer con valor SCN-WMS:FREEZER:[chapa].
 - Impresión individual desde el nuevo panel de etiquetas.
