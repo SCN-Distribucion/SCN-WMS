@@ -1,3 +1,10 @@
+## SCN-WMS V7.4
+- Corrige el pantallazo y la pantalla en blanco al elegir un submenú.
+- Elimina de la carga web el controlador anterior v701.js, que competía con v703.js.
+- Conserva el submenú lateral: módulo > opción > pantalla correspondiente.
+- Traslada al controlador estable los filtros de Historial y el acceso QR de Depósito.
+- No requiere SQL nuevo.
+
 # SCN-WMS V7
 - Corrige la impresión QR en navegador eliminando el motor Node incompatible de V6.7.9.
 - Panel ADMIN de etiquetas QR visible dentro de Base.
