@@ -1,3 +1,12 @@
+####### V6.7.9 Etiquetas QR individuales y masivas
+- Generación de QR estándar y escaneable por freezer con valor SCN-WMS:FREEZER:[chapa].
+- Impresión individual desde el nuevo panel de etiquetas.
+- Impresión masiva con selección, filtro y selección de visibles.
+- Hoja A4 preparada en etiquetas de 70 x 50 mm, tres columnas.
+- QR permanente: no cambia con estado, PDV ni ubicación.
+- Mantiene lector Honeywell EDA51/cámara y toda la funcionalidad V6.7.8.
+- No requiere SQL adicional respecto de SUPABASE-V678-QR-FREEZERS.sql.
+
 ####### V6.7.8 Mobile / Android / QR
 - QR estable por freezer con formato SCN-WMS:FREEZER:[chapa].
 - Lector universal: Honeywell EDA51 por entrada de scanner/teclado y cámara cuando Android ofrece BarcodeDetector.
