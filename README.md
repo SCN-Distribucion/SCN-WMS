@@ -1,3 +1,9 @@
+#### SCN-WMS V7.8.3
+- Unifica version interna, cache y SCN Services en 7.8.3.
+- El dashboard ya no simula clics en el menu lateral para las acciones de segundo nivel.
+- Operacion progresiva: Inicio > bloque > funcion > operacion dentro del panel central.
+- Conserva menu lateral como navegacion alternativa y no requiere SQL nuevo.
+
 #### SCN-WMS V7.8.1
 - Inicio progresivo por rol: muestra un resumen corto y bloques de decisión.
 - Las opciones y estadísticas se abren sólo cuando el usuario las elige.

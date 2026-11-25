@@ -10,7 +10,7 @@
     if (window.Capacitor?.isNativePlatform?.()) return 'MOBILE';
     return matchMedia('(max-width: 780px)').matches ? 'MOBILE' : 'WEB';
   };
-  const context = { channel: detectChannel(), version: '7.8.1', app: 'SCN-WMS' };
+  const context = { channel: detectChannel(), version: '7.8.3', app: 'SCN-WMS' };
   const withMeta = payload => ({ ...payload, _scn: { ...context, at: new Date().toISOString() } });
   const services = {
     get client() { return requireClient(); },
