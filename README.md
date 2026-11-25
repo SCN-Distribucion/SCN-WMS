@@ -1,3 +1,9 @@
+#### SCN-WMS V7.8
+- Inicio operativo personalizado según ADMIN, SUPERVISOR, LOGISTICA, DEPOSITO, SERVICIO_TECNICO y TRANSPORTE.
+- KPIs clickeables, accesos por rol, estadísticas de colocación y movimientos, alertas de reclamos y actividad reciente.
+- Conserva navegación lateral V7.7.2, responsive, viajes, CAMBIO, reclamos, QR, ubicaciones y SCN Services.
+- No requiere SQL nuevo.
+
 #### SCN-WMS V7.7.2
 - Rehace el menu lateral como acordeon interactivo visible.
 - Submenus reales para Deposito, Transporte, Servicio tecnico, Base y Usuarios.
