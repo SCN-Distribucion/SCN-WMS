@@ -1,3 +1,13 @@
+#### SCN-WMS V7.7
+- Responsive consolidado para web, tablet y movil.
+- Tablas de Base y reclamos se presentan como tarjetas legibles en pantallas chicas.
+- Dialogos, formularios, firma, viajes, historial, usuarios, ubicaciones y QR usan controles tactiles de al menos 44 px.
+- Nueva capa `scn-services.js` para centralizar autenticacion, datos, RPC, storage y contexto multicanal.
+- Canales preparados: WEB, MOBILE, BOT y API.
+- Contrato inicial del bot disponible desde `window.scnServices.bot.describe()`.
+- Los controladores operativos de viajes y ubicaciones consumen la fachada SCN Services con retrocompatibilidad Supabase.
+- No requiere SQL nuevo y conserva los RPC, RLS y flujos existentes.
+
 ### SCN-WMS V7.6
 - Rediseño exclusivo de etiquetas QR para mejorar lectura y estética.
 - Etiqueta física 70 x 50 mm.

@@ -1,6 +1,6 @@
 (()=>{'use strict';
 const $=s=>document.querySelector(s),E=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const rt=()=>window.WMS_RUNTIME,u=()=>rt()?.currentUser||{},role=()=>String(u().role||'').toUpperCase(),db=()=>window.scnSupabase;
+const rt=()=>window.WMS_RUNTIME,u=()=>rt()?.currentUser||{},role=()=>String(u().role||'').toUpperCase(),db=()=>window.scnServices?.client||window.scnSupabase;
 let drivers=[],dbTrips=[],editing=null;
 function toast(m,t=''){const x=$('#toast');x.textContent=m;x.className='show '+t;x.style.display='block';setTimeout(()=>{x.style.display='none';x.className=''},3000)}
 function setupTransportView(){const form=$('#tripForm'),article=form?.closest('article');if(!form)return;const canAssign=['ADMIN','LOGISTICA'].includes(role());article.hidden=!canAssign;if(!canAssign){const h=$('#transporte h2');if(h)h.textContent='Mis viajes asignados'}loadTrips();if(canAssign)loadDrivers()}

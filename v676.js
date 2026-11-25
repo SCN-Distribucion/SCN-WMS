@@ -1,6 +1,6 @@
 (() => {'use strict';
 const $=s=>document.querySelector(s), E=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const rt=()=>window.WMS_RUNTIME, u=()=>rt()?.currentUser||{}, role=()=>String(u().role||'').toUpperCase(), db=()=>window.scnSupabase;
+const rt=()=>window.WMS_RUNTIME, u=()=>rt()?.currentUser||{}, role=()=>String(u().role||'').toUpperCase(), db=()=>window.scnServices?.client||window.scnSupabase;
 let drivers=[], trips=[];
 const toast=(m,t='')=>{const x=$('#toast');if(!x)return;x.textContent=m;x.className='show '+t;x.style.display='block';setTimeout(()=>{x.style.display='none';x.className=''},4200)};
 const freezerByPlate=p=>(rt()?.state?.freezers||[]).find(x=>String(x.chapa)===String(p).trim());
