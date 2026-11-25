@@ -1,3 +1,9 @@
+#### SCN-WMS V7.8.4
+- Etiquetas A4: QR contenido dentro del marco, 3.5 mm de margen interno y 4/5 mm de separación para recorte.
+- Asignación de viajes: buscador predictivo por chapa reemplaza el desplegable de freezers disponibles.
+- RETIRO/CAMBIO: búsqueda limitada a equipos ENTREGADOS del PDV ingresado.
+- Mantiene las validaciones y RPC existentes; no requiere SQL nuevo.
+
 #### SCN-WMS V7.8.3
 - Unifica version interna, cache y SCN Services en 7.8.3.
 - El dashboard ya no simula clics en el menu lateral para las acciones de segundo nivel.
