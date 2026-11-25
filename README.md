@@ -1,3 +1,9 @@
+#### SCN-WMS V7.8.1
+- Inicio progresivo por rol: muestra un resumen corto y bloques de decisión.
+- Las opciones y estadísticas se abren sólo cuando el usuario las elige.
+- Incorpora Volver a Inicio y elimina el pantallazo de funciones simultáneas.
+- No requiere SQL nuevo.
+
 #### SCN-WMS V7.8
 - Inicio operativo personalizado según ADMIN, SUPERVISOR, LOGISTICA, DEPOSITO, SERVICIO_TECNICO y TRANSPORTE.
 - KPIs clickeables, accesos por rol, estadísticas de colocación y movimientos, alertas de reclamos y actividad reciente.
