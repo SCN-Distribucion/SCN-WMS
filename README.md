@@ -1,3 +1,9 @@
+#### SCN-WMS V7.7.2
+- Rehace el menu lateral como acordeon interactivo visible.
+- Submenus reales para Deposito, Transporte, Servicio tecnico, Base y Usuarios.
+- En movil, el menu permanece abierto hasta seleccionar la opcion y luego se cierra.
+- Conserva responsive V7.7 y SCN Services.
+
 #### SCN-WMS V7.7.1
 - Corrige la interaccion del menu lateral: los modulos con submenus ahora activan la vista y despliegan opciones correctamente.
 - En movil, el menu se cierra al elegir una opcion del submenu, no antes.
