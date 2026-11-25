@@ -1,3 +1,9 @@
+#### SCN-WMS V7.8.5
+- Impresión QR configurable: A4/A3, vertical/horizontal y separación 3/4/5/6 mm.
+- Cálculo automático de columnas, filas y etiquetas estimadas por hoja manteniendo 70 × 50 mm.
+- Fleteros: mensaje de error visible, detalle técnico y botón Reintentar.
+- Nuevo SQL idempotente para que LOGISTICA/SUPERVISOR lean TRANSPORTE activos.
+
 #### SCN-WMS V7.8.4
 - Etiquetas A4: QR contenido dentro del marco, 3.5 mm de margen interno y 4/5 mm de separación para recorte.
 - Asignación de viajes: buscador predictivo por chapa reemplaza el desplegable de freezers disponibles.
