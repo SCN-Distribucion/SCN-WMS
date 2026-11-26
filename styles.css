@@ -92,3 +92,6 @@
 
 /* V7.8.5 configuracion de papel y estado de fleteros */
 .qr-print-config-v785{display:grid;grid-template-columns:repeat(3,minmax(140px,1fr));gap:10px;margin:10px 0 14px}.qr-print-config-v785 .location-preview{grid-column:1/-1}.driver-error-v785{display:grid;gap:5px;margin-top:7px;padding:10px;border:1px solid #efb84f;border-radius:10px;background:#fff6dc;color:#674600}.driver-error-v785 small{display:block}.driver-error-v785 button{justify-self:start;min-height:36px;padding:7px 12px}@media(max-width:780px){.qr-print-config-v785{grid-template-columns:1fr}.qr-print-config-v785 .location-preview{grid-column:auto}}
+
+/* V7.8.6 estabilidad y Mis viajes */
+.trip-tabs-v786{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 16px}.trip-tabs-v786 button{background:#dceef7;color:#07385b}.trip-tabs-v786 button.on{background:#0784b7;color:#fff}@media(max-width:780px){.trip-tabs-v786{display:grid;grid-template-columns:1fr 1fr}.trip-tabs-v786 button{width:100%}}

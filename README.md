@@ -1,3 +1,13 @@
+##### SCN-WMS V7.8.6
+- Estabilización previa al APK: elimina el clonado de formularios operativos dentro de Inicio.
+- TRANSPORTE no puede asignar viajes ni consultar la Base completa.
+- Mis viajes muestra Por aceptar, Activos, Completados y No cumplidos.
+- Historial y Trazabilidad abren sus módulos funcionales reales.
+- Atrás del navegador/celular vuelve a Inicio y evita pantallas vacías.
+- LOGISTICA conserva autocompletado PDV y datos de fletero en el formulario real.
+- Depósito, alta y reclamos habilitan cámara móvil o selección de archivo.
+- Mantiene impresión A4/A3, buscador de chapas, permisos RLS y preparación Capacitor.
+
 #### SCN-WMS V7.8.5
 - Impresión QR configurable: A4/A3, vertical/horizontal y separación 3/4/5/6 mm.
 - Cálculo automático de columnas, filas y etiquetas estimadas por hoja manteniendo 70 × 50 mm.

@@ -21,7 +21,7 @@ function select(mod,key,btn){nativeOpen(mod);const sec=$('#'+mod);if(!sec)return
  $$('.side-submenu-v772 button').forEach(x=>x.classList.toggle('on',x===btn));
  if(mobile())document.body.classList.add('sidebar-collapsed');
 }
-function build(){const nav=$('#sidebar nav');if(!nav||$('#subnav772-deposito'))return false;
+function build(){const nav=$('#sidebar nav');if(!nav||$('#subnav772-deposito'))return false;const r=String(window.WMS_RUNTIME?.currentUser?.role||'').toUpperCase();if(r==='TRANSPORTE')menus.transporte=[['viajes','Mis viajes','🚚']];
  Object.entries(menus).forEach(([mod,items])=>{const parent=nav.querySelector(`:scope>[data-v="${mod}"]`);if(!parent)return;const sub=document.createElement('div');sub.id='subnav772-'+mod;sub.dataset.owner=mod;sub.className='side-submenu-v772';sub.hidden=true;sub.innerHTML=items.map(([k,l,i])=>`<button type="button" data-m772="${mod}" data-k772="${k}"><span>${i}</span><b>${l}</b></button>`).join('');parent.after(sub);});
  nav.addEventListener('click',e=>{const item=e.target.closest('[data-m772]');if(item){e.preventDefault();e.stopImmediatePropagation();select(item.dataset.m772,item.dataset.k772,item);return}const parent=e.target.closest(':scope>[data-v]');if(!parent||internal)return;const mod=parent.dataset.v;if(!menus[mod]){closeAll();return}e.preventDefault();e.stopImmediatePropagation();const sub=$('#subnav772-'+mod), open=!sub.hidden;closeAll(open?'':mod);sub.hidden=open;parent.classList.toggle('menu-expanded-v772',!open);},true);
  return true;}
