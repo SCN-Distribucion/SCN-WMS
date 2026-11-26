@@ -1,3 +1,9 @@
+##### SCN-WMS V7.8.7
+- Corrige acceso Mis viajes de TRANSPORTE mediante navegación directa al módulo real.
+- Esconde por completo el formulario de asignación para TRANSPORTE.
+- QR muestra datos operativos y los últimos movimientos de trazabilidad, con acceso a trazabilidad completa.
+- Mensaje de éxito de asignación simplificado a “Viaje de [TIPO] asignado”.
+
 ##### SCN-WMS V7.8.6
 - Estabilización previa al APK: elimina el clonado de formularios operativos dentro de Inicio.
 - TRANSPORTE no puede asignar viajes ni consultar la Base completa.

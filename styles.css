@@ -95,3 +95,6 @@
 
 /* V7.8.6 estabilidad y Mis viajes */
 .trip-tabs-v786{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 16px}.trip-tabs-v786 button{background:#dceef7;color:#07385b}.trip-tabs-v786 button.on{background:#0784b7;color:#fff}@media(max-width:780px){.trip-tabs-v786{display:grid;grid-template-columns:1fr 1fr}.trip-tabs-v786 button{width:100%}}
+
+/* V7.8.7 QR con resumen de trazabilidad */
+.scan-trace-v787{display:grid;gap:8px;margin-top:12px;padding:14px;border-radius:14px;background:#fff}.scan-trace-v787 h3{margin:0}.scan-trace-v787>div{display:grid;gap:2px;padding:9px 0;border-bottom:1px solid #dbe8ed}.scan-trace-v787>div small{color:#476579}.scan-trace-v787 button{margin-top:4px}.freezer-trace-v787{align-items:start}
